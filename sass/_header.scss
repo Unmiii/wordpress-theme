@@ -1,0 +1,60 @@
+header {
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+	padding: 10px;
+}
+
+header .container {
+	width: 100%;
+	display: flex;
+	// justify-content: space-around;
+	margin: 0;
+	h2 a {
+		color: rgba(5, 247, 206, 0.75);
+		transition: all 0.35s;
+		&:hover {
+			// color: rgba(5, 247, 206, 0.5);
+			color: rgba(5, 247, 206, 1);
+		}
+	}
+}
+
+.headerLogoDetails {
+	width: 50%;
+	padding-left: 50px;
+	// display: flex;
+	// justify-content: space-around;
+	// align-items: center;
+	h2 {
+		font-size: 3rem;
+		margin: 0;
+		text-transform: none;
+		color: rgba(5, 247, 206, 0.75);
+	}
+	h3 {
+		color: rgba(255, 255, 255, 0.75);
+		padding: 16px;
+	}
+}
+
+.hero {
+	height: 100vh;
+	background: no-repeat fixed;
+	background-position: 50% 57%;
+	background-size: cover;
+}
+
+.logoA {
+	color: rgba(255, 255, 255, 0.95);
+	background: rgba(5, 247, 206, 0.75);
+	border-radius: 2px;
+	padding: 3px;
+}
+
+.logoB {
+	// background: rgba(255, 255, 255, 0.95);
+	color: rgba(5, 247, 206, 0.75);
+}
+
+.highlight {
+	color: rgba(255, 255, 255, 0.8);
+}
