@@ -15,6 +15,7 @@
 @import 'typography';
 @import 'navigation';
 @import 'header';
+@import 'home';
 @import 'sidebar';
 // @import 'comments';
 @import 'about';
@@ -32,7 +33,8 @@ img {
 }
 
 body {
-	color: #333;
+	// color: #333;
+	position: relative;
 }
 
 .main {
@@ -60,6 +62,11 @@ body {
 .full {
 	width: 100%;
 }
+
+i {
+	color: rgba(5, 247, 206, 0.75);
+}
+
 
 
 

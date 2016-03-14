@@ -18,12 +18,24 @@
 			// background: none;
 			padding: 10px;
 			color: rgba(255, 255, 255, 0.85);
+			transition: all 0.35s;
 			&:hover {
 				color: rgba(5, 247, 206, 1);
 				}
 			}
 		}
 	}
+}
+
+.mainNav li:after {
+  content: "// ";
+  position: relative;
+  left: 5px;
+  color: rgba(255,255,255,.85);
+}
+
+.mainNav li:last-child:after {
+	content:" ";
 }
 
 .fixed-header {

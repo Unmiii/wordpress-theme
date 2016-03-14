@@ -1,0 +1,58 @@
+ .flickity-enabled.is-draggable {
+	width: 68%;
+}
+
+.gallery-cell {
+	width: 100%;
+	img {
+		width: 100%;
+		height: 581px;
+	}
+}
+
+.flickity-slider {
+	transform: 0;
+}
+
+.workHeading h4 {
+	text-transform: uppercase;
+}
+
+.workContent p {
+	font-size: 1rem;
+}
+
+.workSection {
+	// display: flex;
+	width: 100%;
+	display: flex;
+}
+
+.workInfo {
+	position: absolute;
+	bottom: 0;
+     padding: 15px;
+     color: white;
+     background: rgba(0, 0, 0, 0.7);
+}
+
+.gallery-thumbnail {
+	width: 32%;
+}
+
+.work-thumbnail {
+	padding: 0 5px 8px 0;
+}
+
+.button {
+	border: 2px solid rgba(5, 247, 206, 0.75);
+	padding: 5px;
+	border-radius: 2px;
+	margin: 5px;
+	color: rgba(255, 255, 255, 0.95);
+	transition: all 0.35s;
+	&:hover {
+		color: rgba(5, 247, 206, 1);
+		background: rgba(255, 255, 255, 0.5);
+	}
+}

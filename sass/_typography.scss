@@ -5,8 +5,9 @@
 // rgba(5, 247, 206, 0.9)
 // rgba(255, 98, 0, 0.85)
 
-h1, h2, h3 {
-	font-family: 'Nixie One';
+h1, h2, h3, h4, h5, a {
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 300;
 }
 
 h1 {
@@ -15,9 +16,27 @@ h1 {
 }
 
 h2 {
+	position: relative;
 	font-size: 3rem;
 	text-transform: uppercase;
 	color: rgba(0, 0, 0, 0.75);
+}
+
+p {
+	font-family: 'Gudea', sans-serif;
+	font-weight: 300;
+}
+
+#about, #work, #contact {
+	&:after {
+	  content: "";
+	  position: absolute;
+	  background: rgba(5, 247, 206, 0.75);
+	  left: 10%;
+	  right: 13%;
+	  height: 2px;	
+	  bottom: -10px;
+	}
 }
 
 h3 {

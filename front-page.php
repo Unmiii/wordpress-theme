@@ -2,6 +2,16 @@
   <div class="main" id="home">
     <div class="hero" style="background-image: url(<?php the_field('hero_image'); ?>">
     </div> <!-- /.hero -->
+
+    <div class="homeTitle">              
+      <h2><a href="#home"><?php the_field('home_title'); ?></a></h2>
+    </div>
+    <script language="javascript">
+      $(document).ready(function() {
+        $(".lettering").lettering();
+      });
+    </script>
+
     <header>
       <div class="container">
 
@@ -32,11 +42,8 @@
       <div class="containerWrapper">
       <!-- MAIN LOOP -->
         <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?> 
-            <h1>              
-                <a href="#home"><?php the_field('home_title'); ?></a>
-            </h1>
             <section class="about">
-              <h2><?php the_field('about_section_title')?></h2>
+              <?php the_field('about_section_title')?>
               <div class="aboutSection">
                 <!-- START OF ABOUT SECTION LOOP -->
                 <?php while(has_sub_fields('about_section')): ?>
@@ -54,32 +61,43 @@
             </section> <!-- /.about -->
 
            <section class="work">
-              <h2><?php the_field('work_section_title'); ?></h2>
+              <?php the_field('work_section_title'); ?>
+
               <div class="workSection">
-                <!-- START OF WORK SECTION LOOP  -->
-                <?php while(has_sub_fields('work_section')): ?>
-                  <div class="portfolioGallery">
-                    <?php $images = get_sub_field('work_section_images');
-                    if( $images ): ?>
-                    <ul>
-                        <?php foreach( $images as $image ): ?>
-                            <li>
-                                <a href="<?php echo $image['url']; ?>">
-                                     <img src="<?php echo $image['sizes']['large'] ?>" alt="<?php echo $image['alt'] ?>" />
-                                </a>
-                                <p><?php echo $image['caption']; ?></p>
-                                <p><?php echo $image['description']; ?></p>
-                            </li>
-                        <?php endforeach; ?>
-                    </ul>
-                    <?php endif; ?>
-                  </div> <!-- /.portfolioGallery -->
-                <?php endwhile; ?> <!-- END OF WORK SECTION LOOP -->
+                <div class="gallery-thumbnail">
+                  <?php while(has_sub_fields('work_section_gallery')): ?>
+                        <div class="work-thumbnail">
+                          <?php $image = get_sub_field('work_section_images'); ?>
+                          <img src="<?php echo $image['sizes']['medium'] ?>" alt="">
+                        </div> <!-- /.work-thumbnail -->
+                 <?php endwhile; ?> <!-- END OF WORK SECTION THUMBNAIL LOOP -->
+                </div> <!-- /.gallery-thumbnail -->
+                <!-- <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'> -->
+                <div id="main-gallery">
+                  <!-- START OF WORK SECTION LOOP  -->
+                  <?php while(has_sub_fields('work_section_gallery')): ?>
+                      <div class="gallery-cell">
+                          <div class="workImage">
+                            <?php $image = get_sub_field('work_section_images'); ?>
+                            <img src="<?php echo $image['sizes']['medium'] ?>" alt="">
+                          </div>
+                          <div class="workInfo">
+                            <div class="workHeading">
+                              <h4><?php the_sub_field('work_section_image_caption_titles'); ?></h4>
+                            </div> <!-- /.workHeading -->
+                            <div class="workContent">
+                              <p><?php the_sub_field('work_section_image_details'); ?></p>
+                              <p><?php the_sub_field('work_section_skills'); ?></p>
+                            </div> <!-- /.workContent -->
+                          </div> <!-- /.workInfo -->
+                    </div>
+                  <?php endwhile; ?> <!-- END OF WORK SECTION FLICKITY LOOP -->
+                </div>
               </div> <!-- /.workSection -->
             </section> <!-- /.work -->
 
             <section class="contact">
-              <h2><?php the_field('contact_section_title'); ?></h2>
+              <?php the_field('contact_section_title'); ?>
               <div class="contactWrapper">
                 <div class="contactForm">
                   <form class="contact-form" method="post" action="http://www.focuspocus.io/magic/unmi.chung@hotmail.com">
@@ -103,12 +121,12 @@
                   </form>
                 </div> <!-- /.contactForm -->
                 <div class="contactDetails">
+                  <?php the_field('contact_section_content'); ?>
                   <div class="profileImage">
                     <?php $image = get_field('profile_image'); ?>
                     <!-- <pre><?php print_r($image); ?></pre> -->
                     <img src="<?php echo $image['sizes']['medium'] ?>" alt="">
                   </div>
-                  <?php the_field('contact_section_content'); ?>
                 </div> <!-- /.contactDetails -->
               </div> <!-- /.contactWrapper -->
             </section> <!-- /.contact -->
