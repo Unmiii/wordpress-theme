@@ -1,4 +1,69 @@
 .homeTitle {
 	position: absolute;
-	top: 5%;
+	top: 25%;
+	z-index: 1000;
+	h2 .lettering {
+		color: rgba(0, 0, 0, 0.75);
+		position: relative;
+		top: -30px;
+		left: 61%;
+	}
+}
+
+.word4 .char2, .word4 .char3, .word4 .char4, .word4 .char5, .word4 .char6 {
+	position: absolute;
+	left: 0;
+}
+
+.word4 .char2 {
+	top: 45px;
+}
+
+.word4 .char3 {
+	top: 91px;
+}
+
+.word4 .char4 {
+	top: 136px;
+}
+
+.word4 .char5 {
+	top: 180px;
+}
+
+.word4 .char6 {
+	top: 224px;
+}
+
+.word5, .word6 {
+	position: relative;
+	top: 224px;
+	left: -5px;
+}
+
+.homeLogoA {
+	background: rgba(255, 255, 255, 0.7);
+	// transition: all 0.35s;
+	// &:hover {
+	// 	color: rgba(5, 247, 206, 1);
+	// 	background: rgba(255, 255, 255, 0.7);
+	// }
+}
+
+.homeLogoB {
+	left: 109%;
+	color: rgba(255, 255, 255, 0.9);
+	background: rgba(5, 247, 206, 0.6);
+	// transition: all 0.35s;
+	// &:hover {
+	// 	color: rgba(255, 255, 255, 1);
+	// 	background: rgba(5, 247, 206, 0.6);
+	// }
+}
+
+.scrollBottom {
+	// background: rgba(5, 247, 206, 0.6);
+	position: absolute;
+	top: 23%;
+	left: 48%;
 }

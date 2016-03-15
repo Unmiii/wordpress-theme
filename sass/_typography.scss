@@ -5,7 +5,7 @@
 // rgba(5, 247, 206, 0.9)
 // rgba(255, 98, 0, 0.85)
 
-h1, h2, h3, h4, h5, a {
+h1, h2, h3, h4, h5, a, footer p {
 	font-family: 'Quicksand', sans-serif;
 	font-weight: 300;
 }
@@ -13,6 +13,10 @@ h1, h2, h3, h4, h5, a {
 h1 {
 	font-size: 4.7rem;
 	color: rgba(5, 247, 206, 0.75);
+	position: absolute;
+	left: 78%;
+	top: 43%;
+	text-transform: lowercase;
 }
 
 h2 {

@@ -16,11 +16,21 @@
 			// margin-right: 10px;
 			a {
 			// background: none;
+			display: inline-block;
 			padding: 10px;
 			color: rgba(255, 255, 255, 0.85);
 			transition: all 0.35s;
-			&:hover {
-				color: rgba(5, 247, 206, 1);
+			&:after {
+				content: '';
+				display: block;
+				height: 2px;
+				width: 0;
+				background: transparent;
+				transition: width .5s ease, background-color .5s ease;
+			}
+			&:hover:after {
+				width: 90%;
+				background: rgba(5, 247, 206, 1);
 				}
 			}
 		}

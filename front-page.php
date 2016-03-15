@@ -1,18 +1,16 @@
   <?php get_header(); ?>
+  <div class="homeTitle">              
+    <h2><?php the_field('home_title'); ?></h2>
+  </div>
   <div class="main" id="home">
-    <div class="hero" style="background-image: url(<?php the_field('hero_image'); ?>">
-    </div> <!-- /.hero -->
+    <div class="hero" style="background-image: url(<?php the_field('hero_image'); ?>"></div>
 
-    <div class="homeTitle">              
-      <h2><a href="#home"><?php the_field('home_title'); ?></a></h2>
+    <div class="scrollBottom">
+      <?php $image = get_field('home_logo_image'); ?>
+      <a href="#header"><img src="<?php echo $image['sizes']['large'] ?>" alt=""></a>
     </div>
-    <script language="javascript">
-      $(document).ready(function() {
-        $(".lettering").lettering();
-      });
-    </script>
 
-    <header>
+    <header id="header">
       <div class="container">
 
       <div class="toggle-btn">
@@ -25,7 +23,6 @@
             <?php the_field('logo'); ?>
             </a>
           </h2>
-          <!-- <h3><?php the_field('header_tagline') ?></h3> -->
         </div> 
 
         <div class="mainNav">
@@ -72,8 +69,8 @@
                         </div> <!-- /.work-thumbnail -->
                  <?php endwhile; ?> <!-- END OF WORK SECTION THUMBNAIL LOOP -->
                 </div> <!-- /.gallery-thumbnail -->
-                <!-- <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'> -->
-                <div id="main-gallery">
+                <!-- <div id="main-gallery"> -->
+                <div class="gallery js-flickity" id="main-gallery" data-flickity-options='{ "wrapAround": true }'> 
                   <!-- START OF WORK SECTION LOOP  -->
                   <?php while(has_sub_fields('work_section_gallery')): ?>
                       <div class="gallery-cell">
