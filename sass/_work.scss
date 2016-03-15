@@ -28,12 +28,13 @@
 
 .workSection {
 	width: 100%;
-	display: flex;
+	// display: flex;
 }
 
 .workInfo {
 	position: absolute;
 	bottom: 0;
+	width: 100%;
      padding: 15px;
      color: white;
      background: rgba(0, 0, 0, 0.7);
@@ -41,7 +42,12 @@
 
 .gallery-thumbnail {
 	width: 32%;
-	// float: left;
+	float: left;
+}
+
+.gallery {
+	width: 68%;
+	float: left;
 }
 
 .work-thumbnail {

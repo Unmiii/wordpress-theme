@@ -60,7 +60,7 @@
            <section class="work">
               <?php the_field('work_section_title'); ?>
 
-              <div class="workSection">
+              <div class="workSection clearfix">
                 <div class="gallery-thumbnail">
                   <?php while(has_sub_fields('work_section_gallery')): ?>
                         <div class="work-thumbnail">
@@ -108,7 +108,7 @@
                     </p>
                     <p>
                       <label for="url"><i class="fa fa-globe"></i></label>
-                      <input id="url" type="url" name="url" placeholder="Enter your email address">
+                      <input id="url" type="url" name="url" placeholder="Enter your website url">
                     </p>
                     <p>
                       <label for="message">Message</label>
