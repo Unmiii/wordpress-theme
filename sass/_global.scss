@@ -1,0 +1,48 @@
+/*
+====================================
+Default Styling
+====================================
+*/
+
+body, html {
+	height: 100vh;
+	max-width: 1366px;
+	margin: 0 auto;
+}
+
+img {
+	max-width: 100%;
+}
+
+body {
+	position: relative;
+}
+
+.main {
+	max-width: 1366px;
+	position: relative;
+	margin: 0 auto;
+}
+
+.pageWrapper {
+	width: 100%;
+}
+
+.container {
+	width: 75%;
+	margin: 0 auto;
+}
+
+.content {
+	float: left;
+	width: 65%;
+	margin-right: 5%;
+}
+
+.full {
+	width: 100%;
+}
+
+i {
+	color: rgba(5, 247, 206, 0.75);
+}

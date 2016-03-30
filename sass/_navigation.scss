@@ -1,21 +1,13 @@
 .mainNav {
 	display: flex;
 	justify-content: flex-end;
-	// align-items: center;
 	z-index: 100;
 	padding-right: 50px;
 	width: 50%;
 	 ul.menu {
-	 	// width: 100%;
-	 	// display: flex;
-	 	// justify-content: flex-end;
-	 	// margin: 0;
-	 	// padding: 0;
 		li {
 			display: inline;
-			// margin-right: 10px;
 			a {
-			// background: none;
 			display: inline-block;
 			padding: 10px;
 			color: rgba(255, 255, 255, 0.85);
@@ -51,6 +43,5 @@
 .fixed-header {
     position: fixed;
     top: 0;
-    // left: 0;
     width: 100%;
 }

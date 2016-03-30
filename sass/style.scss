@@ -13,6 +13,7 @@
 
 @import 'normalize';
 @import 'typography';
+@import 'global';
 @import 'navigation';
 @import 'header';
 @import 'home';
@@ -22,56 +23,7 @@
 @import 'work'; 
 @import 'contact';
 @import 'footer';
-/*
-====================================
-Default Styling
-====================================
-*/
-
-body, html {
-	height: 100vh;
-	width: 100%;
-	margin: 0 auto;
-}
-
-img {
-	max-width: 100%;
-}
-
-body {
-	// color: #333;
-	position: relative;
-}
-
-.main {
-	max-width: 1366px;
-	position: relative;
-	margin: 0 auto;
-}
-
-.pageWrapper {
-	width: 100%;
-	// margin: 0 auto;
-}
-
-.container {
-	width: 75%;
-	margin: 0 auto;
-}
-
-.content {
-	float: left;
-	width: 65%;
-	margin-right: 5%;
-}
-
-.full {
-	width: 100%;
-}
-
-i {
-	color: rgba(5, 247, 206, 0.75);
-}
+@import 'mediaQueries';
 
 
 

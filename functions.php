@@ -45,14 +45,16 @@ We'll let WordPress add them to our templates automatically instead
 of writing our own link tags in the header. */
 
 function hackeryou_styles(){
-	wp_enqueue_style('style', get_stylesheet_uri() );
+	// wp_enqueue_style('style', get_stylesheet_uri() );
 
 	wp_enqueue_style('fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
 	wp_enqueue_style('googlefonts', 'https://fonts.googleapis.com/css?family=Quicksand:400,300');
 	wp_enqueue_style('googlefonts', 'https://fonts.googleapis.com/css?family=Gudea');
-	wp_enqueue_style('animate', '/animate.css');
-	wp_enqueue_style('flickity', 'https://npmcdn.com/flickity@1.1/dist/flickity.css');
-	// wp_enqueue_style('flickity', 'flickity.css');
+	wp_enqueue_style( 'animate', get_template_directory_uri() . '/css/animate.css',false,'3.5.1','all');
+	wp_enqueue_style( 'flickity', get_template_directory_uri() . '/css/flickity.css',false,'1.1','all');
+	wp_enqueue_style('style', get_stylesheet_uri() );
+
+
 }
 
 add_action( 'wp_enqueue_scripts', 'hackeryou_styles');

@@ -1,12 +1,17 @@
 .homeTitle {
 	position: absolute;
-	top: 25%;
+	top: 16%;
+	left: calc(50% - 281.5px);
 	z-index: 1000;
-	h2 .lettering {
-		color: rgba(0, 0, 0, 0.75);
-		position: relative;
-		top: -30px;
-		left: 61%;
+}
+
+.fullTitle {
+	position: relative;
+	.lettering {
+	// color: rgba(0, 0, 0, 0.75);
+	color: rgba(107, 11, 65, 0.85);
+	font-weight: 400;
+	position: relative;
 	}
 }
 
@@ -51,7 +56,8 @@
 }
 
 .homeLogoB {
-	left: 109%;
+	font-weight: 400;
+	left: 47%;
 	color: rgba(255, 255, 255, 0.9);
 	background: rgba(5, 247, 206, 0.6);
 	// transition: all 0.35s;
@@ -62,8 +68,8 @@
 }
 
 .scrollBottom {
-	// background: rgba(5, 247, 206, 0.6);
 	position: absolute;
-	top: 23%;
-	left: 48%;
+     top: 21%;
+     left: calc(50% - 25.289px);
+     font-size: 2rem;
 }

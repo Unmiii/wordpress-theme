@@ -1,9 +1,9 @@
 .aboutSection {
 	display: flex;
+	width: 100%;
 }
 
 .aboutHeading {
-	// position: relative;
 	display: flex;
 }
 
@@ -15,13 +15,10 @@
 }
 
 .aboutContentWrapper {
-	padding: 0 20px;
+	padding: 0 10px;
+	width: 33.33%;
 }
 
-.aboutContentWrapper:first-child {
-	padding: 0
-}
-
-.aboutContentWrapper:last-child {
-	padding: 0
+.aboutContentWrapper:first-child, .aboutContentWrapper:last-child {
+	padding: 0 10px;
 }

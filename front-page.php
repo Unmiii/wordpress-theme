@@ -5,9 +5,8 @@
   <div class="main" id="home">
     <div class="hero" style="background-image: url(<?php the_field('hero_image'); ?>"></div>
 
-    <div class="scrollBottom">
-      <?php $image = get_field('home_logo_image'); ?>
-      <a href="#header"><img src="<?php echo $image['sizes']['large'] ?>" alt=""></a>
+    <div class="scrollBottom animated infinite bounce">
+      <a href="#mainNav"><i class="fa fa-angle-double-down animated infinite bounce"></i></a>
     </div>
 
     <header id="header">
@@ -25,7 +24,7 @@
           </h2>
         </div> 
 
-        <div class="mainNav">
+        <div class="mainNav" id="mainNav">
           <?php wp_nav_menu( array(
               'container' => false,
               'theme_location' => 'primary'
@@ -61,22 +60,13 @@
               <?php the_field('work_section_title'); ?>
 
               <div class="workSection clearfix">
-                <div class="gallery-thumbnail">
-                  <?php while(has_sub_fields('work_section_gallery')): ?>
-                        <div class="work-thumbnail">
-                          <?php $image = get_sub_field('work_section_images'); ?>
-                          <img src="<?php echo $image['sizes']['medium'] ?>" alt="">
-                        </div> <!-- /.work-thumbnail -->
-                 <?php endwhile; ?> <!-- END OF WORK SECTION THUMBNAIL LOOP -->
-                </div> <!-- /.gallery-thumbnail -->
-                <!-- <div id="main-gallery"> -->
                 <div class="gallery js-flickity" id="main-gallery" data-flickity-options='{ "wrapAround": true }'> 
                   <!-- START OF WORK SECTION LOOP  -->
                   <?php while(has_sub_fields('work_section_gallery')): ?>
                       <div class="gallery-cell">
                           <div class="workImage">
                             <?php $image = get_sub_field('work_section_images'); ?>
-                            <img src="<?php echo $image['sizes']['medium'] ?>" alt="">
+                            <img src="<?php echo $image['sizes']['large'] ?>" alt="">
                           </div>
                           <div class="workInfo">
                             <div class="workHeading">
@@ -96,8 +86,51 @@
             <section class="contact">
               <?php the_field('contact_section_title'); ?>
               <div class="contactWrapper">
+                <div class="contactDetails">
+                  <div class="contactInfo">
+                    <div class="contactBlurb">
+                      <div class="contactBlurbHeader">
+                        <div class="profileImage">
+                          <?php $image = get_field('profile_image'); ?>
+                          <img src="<?php echo $image['sizes']['medium'] ?>" alt="">
+                        </div>
+                        <div class="contactBlurbTitle">
+                          <h3>Michelle Chung</h3>
+                          <h4>Front-End Web Developer</h4>
+                        </div>
+                      </div>
+                      <p>Hi there! If you'd like to discuss a potential project or just want to say hello, send me a message!</p>
+                    </div>
+
+                    <div class="contactSocial">
+                      <p>
+                        <strong>Contact me:</strong>
+                          <a href="tel:+1(647)302-1081">+1  (647) 302-1081</a>
+                      </p>
+                      <p>
+                        <strong>Email me:</strong> 
+                        <a href="mailto:michelle@michellecodes.ca">michelle@michellecodes.ca</a>
+                      </p>
+                      <p>
+                        <strong>Follow me:</strong> 
+                        <a href="http://www.twitter.com/unmi123">
+                          <i class="fa fa-twitter"></i>
+                          Twitter
+                        </a> / 
+                        <a href="http://www.github.com/Unmiii">
+                          <i class="fa fa-github-alt"></i>
+                          GitHub
+                        </a> / 
+                        <a href="https://ca.linkedin.com/in/michellechungcodes">
+                          <i class="fa fa-linkedin"></i>
+                          LinkedIn
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div> <!-- /.contactDetails -->
                 <div class="contactForm">
-                  <form class="contact-form" method="post" action="http://www.focuspocus.io/magic/unmi.chung@hotmail.com">
+                  <form class="contact-form" method="post" action="http://www.focuspocus.io/magic/michelle@michellecodes.ca">
                     <p>
                       <label for="name"><i class="fa fa-user"></i></label>
                       <input id="name" type="text" name="name" required="required" placeholder="Enter your name">
@@ -114,17 +147,9 @@
                       <label for="message">Message</label>
                       <textarea name="message" id="message" required="required"></textarea>
                     </p>
-                    <input name="submit" class="submit" type="submit" value="Send that message">
+                    <input name="submit" class="submit" type="submit" value="SEND MESSAGE">
                   </form>
                 </div> <!-- /.contactForm -->
-                <div class="contactDetails">
-                  <?php the_field('contact_section_content'); ?>
-                  <div class="profileImage">
-                    <?php $image = get_field('profile_image'); ?>
-                    <!-- <pre><?php print_r($image); ?></pre> -->
-                    <img src="<?php echo $image['sizes']['medium'] ?>" alt="">
-                  </div>
-                </div> <!-- /.contactDetails -->
               </div> <!-- /.contactWrapper -->
             </section> <!-- /.contact -->
         <?php endwhile; // end of the loop. ?> 

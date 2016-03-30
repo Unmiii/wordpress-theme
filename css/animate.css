@@ -9,8 +9,8 @@
  */
 
 .animated {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
@@ -29,8 +29,10 @@
 .animated.flipOutY,
 .animated.bounceIn,
 .animated.bounceOut {
-  -webkit-animation-duration: .75s;
-  animation-duration: .75s;
+/*  -webkit-animation-duration: .75s;
+  animation-duration: .75s;*/
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
 }
 
 @-webkit-keyframes bounce {
@@ -55,10 +57,10 @@
     transform: translate3d(0, -15px, 0);
   }
 
-  90% {
+/*  90% {
     -webkit-transform: translate3d(0,-4px,0);
     transform: translate3d(0,-4px,0);
-  }
+  }*/
 }
 
 @keyframes bounce {
@@ -83,10 +85,10 @@
     transform: translate3d(0, -15px, 0);
   }
 
-  90% {
+/*  90% {
     -webkit-transform: translate3d(0,-4px,0);
     transform: translate3d(0,-4px,0);
-  }
+  }*/
 }
 
 .bounce {
